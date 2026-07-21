@@ -12,5 +12,6 @@
   "editor.formatOnPaste": true,
   "editor.wordWrapColumn": 100,
   "terminal.integrated.cursorStyle": "underline",
-  "terminal.integrated.fontFamily": "'Hack'"
+  "terminal.integrated.fontFamily": "'Hack'",
+  "editor.letterSpacing": 2
 }
