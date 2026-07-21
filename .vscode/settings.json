@@ -3,5 +3,14 @@
     "source.fixAll": "explicit",
     "source.organizeImports": "explicit",
     "source.sortMembers": "explicit"
-  }
+  },
+  "editor.fontSize": 16,
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "editor.fontFamily": "'Liberation Sans', monospace",
+  "editor.wordWrap": "on",
+  "editor.formatOnPaste": true,
+  "editor.wordWrapColumn": 100,
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.fontFamily": "'Hack'"
 }
