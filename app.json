@@ -7,12 +7,6 @@
     "icon": "./assets/images/icon.png",
     "scheme": "rnapp",
     "userInterfaceStyle": "dark",
-    // "newArchEnabled": true,
-    // "splash": {
-    //   "image": "./assets/images/splash.png",
-    //   "resizeMode": "contain",
-    //   "backgroundColor": "#09090b"
-    // },
     "ios": {
       "supportsTablet": true
     },
@@ -21,8 +15,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#09090b"
       },
-      // "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.moacirrochadev.rnapp"
     },
     "web": {
       "bundler": "metro",
@@ -34,6 +28,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "53981aa8-1c3a-4476-bc6d-5555c21df641"
+      }
     }
   }
 }
