@@ -1,19 +1,18 @@
 # RN App
 
-Aplicativo mobile feito com Expo, React Native e TypeScript para salvar, organizar e acessar links de forma simples. O projeto usa navegação com Expo Router e armazenamento local com AsyncStorage, então os dados ficam salvos no próprio dispositivo.
+Aplicativo mobile desenvolvido com Expo, React Native e TypeScript para gerenciamento local de links por categoria. O projeto utiliza Expo Router para navegação entre telas e AsyncStorage para persistência, mantendo os dados armazenados no dispositivo sem depender de backend.
 
-## Sobre o projeto
+## Visão geral
 
-Este app foi pensado para registrar links por categoria e facilitar a consulta depois. A tela inicial lista os links salvos, permite filtrar por categoria e abrir ou excluir cada item. A tela de cadastro permite adicionar novos links com nome, URL e categoria.
+O fluxo principal do app cobre cadastro, consulta, filtragem e manutenção de links. A tela inicial exibe os itens salvos por categoria e permite abrir ou remover registros. A tela de inclusão coleta nome, URL e categoria para persistir um novo link localmente.
 
 ## Funcionalidades
 
 - Cadastro de links com nome, URL e categoria.
-- Listagem de links salvos.
-- Filtro por categoria.
-- Abertura do link no navegador.
-- Exclusão de links.
-- Persistência local dos dados no dispositivo.
+- Listagem e filtragem dos links salvos.
+- Abertura do link no navegador padrão.
+- Exclusão de registros com confirmação.
+- Persistência local com AsyncStorage.
 
 ## Tecnologias
 
@@ -23,7 +22,7 @@ Este app foi pensado para registrar links por categoria e facilitar a consulta d
 - Expo Router
 - AsyncStorage
 
-## Como executar
+## Execução
 
 1. Instale as dependências:
 
@@ -47,12 +46,12 @@ npm run web
 
 ## Estrutura principal
 
-- `src/app`: telas e rotas do app.
-- `src/components`: componentes reutilizáveis da interface.
-- `src/storage`: camada de persistência local.
-- `src/utils`: dados auxiliares, como categorias.
-- `src/styles`: cores e estilos compartilhados.
+- `src/app`: rotas, telas e composição das páginas.
+- `src/components`: componentes reutilizáveis de interface.
+- `src/storage`: abstração de persistência local.
+- `src/utils`: dados estáticos e auxiliares do domínio.
+- `src/styles`: tokens visuais e estilos compartilhados.
 
-## Observação
+## Observação técnica
 
-Os links são armazenados apenas localmente no dispositivo. Se o app for reinstalado ou os dados forem limpos, o conteúdo salvo será perdido.
+O projeto não possui backend nem sincronização remota. Toda a informação depende do armazenamento local do dispositivo, então a reinstalação do app ou a limpeza dos dados apaga os registros salvos.
