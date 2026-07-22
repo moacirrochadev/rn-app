@@ -7,12 +7,12 @@
     "icon": "./assets/images/icon.png",
     "scheme": "rnapp",
     "userInterfaceStyle": "dark",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/images/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#09090b"
-    },
+    // "newArchEnabled": true,
+    // "splash": {
+    //   "image": "./assets/images/splash.png",
+    //   "resizeMode": "contain",
+    //   "backgroundColor": "#09090b"
+    // },
     "ios": {
       "supportsTablet": true
     },
@@ -21,7 +21,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#09090b"
       },
-      "edgeToEdgeEnabled": true,
+      // "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
     "web": {
