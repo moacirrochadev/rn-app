@@ -4,10 +4,9 @@ import { Input } from "@/components/input";
 import { linkstorage } from "@/storage/link-storage";
 import { colors } from "@/styles/colors";
 import { MaterialIcons } from "@expo/vector-icons";
-import { router } from "expo-router";
+import { router, Link } from "expo-router";
 import { useState } from "react";
-import { Alert, Text, TouchableOpacity, View } from "react-native";
-import { styles } from "./styles";
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function Add() {
     const [category, setCategory] = useState("");
@@ -49,6 +48,7 @@ export default function Add() {
             <View style={styles.header}>
                 <TouchableOpacity onPress={() => router.back()}>
                     <MaterialIcons name="arrow-back" size={32} color={colors.gray[200]} />
+                    <Link href="/index" />
                 </TouchableOpacity>
 
                 <Text style={styles.title}>Novo</Text>
@@ -65,3 +65,31 @@ export default function Add() {
         </View>
     )
 }
+
+export const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        paddingTop: 62,
+        backgroundColor: colors.gray[950]
+    },
+    header: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        paddingHorizontal: 24,
+        marginBottom: 24
+    },
+    title: {
+        color: colors.gray[200],
+        fontSize: 24,
+        fontWeight: "600"
+    },
+    label: {
+        color: colors.gray[400],
+        fontSize: 14,
+        paddingHorizontal: 24,
+    },
+    form: {
+        padding: 24,
+        gap: 16
+    }
+})

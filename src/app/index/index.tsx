@@ -1,4 +1,3 @@
-import { styles } from "@/app/index/styles";
 import { Categories } from "@/components/categories";
 import { Link } from "@/components/link";
 import { Option } from "@/components/option";
@@ -7,7 +6,7 @@ import { colors } from "@/styles/colors";
 import { MaterialIcons } from "@expo/vector-icons";
 import { router, useFocusEffect } from "expo-router";
 import { useCallback, useState } from "react";
-import { Alert, FlatList, Image, Linking, Modal, Text, TouchableOpacity, View } from "react-native";
+import { Alert, FlatList, Image, Linking, Modal, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 
 export default function Index() {
@@ -110,8 +109,13 @@ export default function Index() {
                                 name="Excluir"
                                 icon="delete"
                                 onPress={handleRemove}
-                                variant="secondary" />
-                            <Option name="Abrir" icon="language" onPress={handleOpen} />
+                                variant="secondary"
+                            />
+                            <Option
+                                name="Abrir"
+                                icon="language"
+                                onPress={handleOpen}
+                            />
                         </View>
                     </View>
                 </View>
@@ -120,3 +124,78 @@ export default function Index() {
 
     )
 }
+
+export const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        padding: 62,
+        backgroundColor: colors.gray[950]
+    },
+    title: {
+        fontSize: 24,
+        fontWeight: "bold",
+        color: colors.gray[100],
+    },
+    header: {
+        paddingHorizontal: 24,
+        width: "100%",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginBottom: 32
+    },
+    logo: {
+        height: 32,
+        width: 38
+    },
+    links: {
+        borderTopWidth: 1,
+        borderTopColor: colors.gray[600]
+    },
+    linksContent: {
+        gap: 20,
+        padding: 24,
+        paddingBottom: 100
+    },
+    modal: {
+        flex: 1,
+        justifyContent: "flex-end",
+    },
+    modalContent: {
+        backgroundColor: colors.gray[900],
+        borderTopWidth: 1,
+        borderTopColor: colors.gray[800],
+        paddingBottom: 42,
+        padding: 24,
+    },
+    modalHeader: {
+        width: "100%",
+        flexDirection: "row",
+        alignItems: "center",
+        marginBottom: 32,
+    },
+    modalCategory: {
+        flex: 1,
+        fontSize: 16,
+        fontWeight: "500",
+        color: colors.gray[400]
+    },
+    modalLinkName: {
+        fontSize: 18,
+        fontWeight: "600",
+        color: colors.gray[200],
+    },
+    modalUrl: {
+        fontSize: 14,
+        color: colors.gray[400],
+    },
+    modalFooter: {
+        flexDirection: "row",
+        marginTop: 32,
+        width: "100%",
+        justifyContent: "space-between",
+        borderTopWidth: 1,
+        borderTopColor: colors.gray[600],
+        paddingVertical: 14,
+    }
+})
