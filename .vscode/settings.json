@@ -7,11 +7,12 @@
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
   "files.autoSave": "afterDelay",
-  "editor.fontFamily": "'Liberation Sans', monospace",
+  "editor.fontFamily": "'JetBrains Mono', monospace",
   "editor.wordWrap": "on",
   "editor.formatOnPaste": true,
   "editor.wordWrapColumn": 100,
   "terminal.integrated.cursorStyle": "underline",
-  "terminal.integrated.fontFamily": "'Hack'",
-  "editor.letterSpacing": 2
+  "terminal.integrated.fontFamily": "'JetBrains Mono', monospace",
+  "editor.letterSpacing": 1,
+  "terminal.integrated.letterSpacing": 1
 }
